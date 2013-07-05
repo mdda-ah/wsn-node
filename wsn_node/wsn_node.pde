@@ -70,7 +70,7 @@ float no2min = 255.0;
 float no2max = 0.0;
 
 /*
-Gains and resitance values for sensors that need them on this Waspmote.
+Gains and resistance values for sensors that need them on this Waspmote.
 NOTE: These values are based on sensor calibration runs and are specific to each Waspmote / Gas Board "unit". The values you use may vary.
 */
 int    MDDA_CO_GAIN = 1;
@@ -181,7 +181,7 @@ void loop() {
     DEBUG_PRINT_DEC(freeMemory());
 
     /*
-    Reboot the Waspmote if this is the hundreth cycle through the loop().
+    Reboot the Waspmote if this is the hundredth cycle through the loop().
     NOTE: This is probably not needed. Just the author being paranoid about memory leaks.
     */
     if (counter == 100) {
@@ -372,8 +372,8 @@ void WSN_attemptToSendDataFrameViaZigBee() {
       xbeeZB.setDestinationParams(paq_sent, ZB_MAC_OF_RECEIVING_ZIGBEE, data_frame, MAC_TYPE, DATA_ABSOLUTE);
 
       /*
-Attempt to send the data
-*/
+      Attempt to send the data
+      */
       xbeeZB.sendXBee(paq_sent);
       if (xbeeZB.error_TX > 0) {
         DEBUG_PRINT(MSG_ZB_TRANSMIT_ERROR);
@@ -477,7 +477,7 @@ float getMin(float current, float reading) {
   } else {
    return current;
   }
-}
+} //  End of getMin()
 
 /*
 Returns maxiumum value from those supplied.
@@ -488,4 +488,4 @@ float getMax(float current, float reading) {
   } else {
    return current;
   }
-}
+} //  End of getMax()
